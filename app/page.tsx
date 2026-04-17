@@ -7,7 +7,7 @@ export default function Home() {
   const { data: session, status } = useSession();
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   async function getRecommendations() {
     setLoading(true);
